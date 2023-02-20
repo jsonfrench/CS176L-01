@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.lang.Math;
 
 public class DonationsTester {
 
@@ -26,17 +27,17 @@ public class DonationsTester {
 		//read from file
 		String line;
 		while (donations_reader.hasNextLine()) {
-		line = donations_reader.nextLine();
-
-		String[] parsed_line = line.split(">");
-		int donation_amount = Integer.parseInt(parsed_line[1]);
-
-		System.out.println(parsed_line.length);
-		
-		if (parsed_line.length > 1) {
-			System.out.println(donation_amount);
-		}
-		
+			
+			line = donations_reader.nextLine();
+			String[] parsed_line = line.split(">");
+				
+			if (parsed_line.length > 1) {
+				String donation_category = parsed_line[0];
+				donation_category = donation_category.substring(1);
+				int donation_amount = Integer.parseInt(parsed_line[1]);
+				giveToMe.processDonation(donation_category, donation_amount);
+			}
+				
 		}
 
 		giveToMe.getStatistics();
