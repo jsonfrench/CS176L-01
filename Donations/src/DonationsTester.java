@@ -25,8 +25,8 @@ public class DonationsTester {
 			System.out.print("Ending now without processing donations\n");
 			System.exit(0);
 		}
-		
-		/*==========read from file==========*/
+
+
 		String line;
 		while (donations_reader.hasNextLine()) {
 			
@@ -41,6 +41,22 @@ public class DonationsTester {
 			}
 				
 		}
+
+/*
+		String line;
+		while (donations_reader.hasNextLine()) {
+			
+			line = donations_reader.nextLine();					//read every line
+			String parsed_line = line.replaceAll("[^0-9.-]", "");				//and then delete numbers
+				
+			System.out.println(parsed_line);
+			//String donation_category = parsed_line[0];						
+			//donation_category = donation_category.substring(1);
+			//int donation_amount = Integer.parseInt(parsed_line[1]);
+			//giveToMe.processDonation(donation_category, donation_amount);
+				
+		}
+*/
 
 		/*==========execute function==========*/
 		giveToMe.getStatistics();
