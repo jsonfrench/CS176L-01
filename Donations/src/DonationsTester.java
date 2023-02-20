@@ -13,7 +13,7 @@ public class DonationsTester {
 		Scanner input = new Scanner(System.in);			//import scanner
 		Donations giveToMe = new Donations();			//import donations class
 		
-		System.out.print("Would you like to process donations now? (enter \'Yes\' to continue):");
+		System.out.print("Would you like to process donations now? (enter \'Yes\' to continue):\n");
 		
 		String user_response = input.nextLine();		//read input
 		user_response = user_response.toLowerCase();
