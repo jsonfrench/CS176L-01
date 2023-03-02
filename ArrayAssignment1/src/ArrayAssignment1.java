@@ -12,7 +12,7 @@ public class ArrayAssignment1 {
 		System.out.print("\n");
 
 		//2. Computing and printing the largest elements in the array
-		double largest = 0;
+		double largest = values[0];
 		for(double value : values) {
 			if(value > largest) {
 				largest = value;				
