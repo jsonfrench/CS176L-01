@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 /**
    This program demonstrates the measurable Country class.
+   credit to dominick for helping me out with the 
+   code
 */
 public class MeasurableTester
 {
